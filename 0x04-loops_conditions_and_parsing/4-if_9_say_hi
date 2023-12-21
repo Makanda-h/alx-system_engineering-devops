@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
-# print holberton school 10 times using while loop and if condition
+# Displays "Best School" 10 times using a while loop.
+#   On the 9th iteration, displays "Hi" before "Best School".
 
-declare -i idx=0
-while (( idx < 10 ))
+count=0
+
+while [ $count -lt 10 ]
 do
-    echo "Holberton School"
-    if (( idx == 8 ))
-	then
-	echo "Hi"
-	fi
-    (( idx++ ))
+  if [ $count -eq 9 ]
+  then
+    echo "Hi"
+  fi
+  echo "Best School"
+  (( count++ ))
 done
